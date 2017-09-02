@@ -7,6 +7,7 @@ import {mapboxGLOptions, searchConfig} from './map.config';
 
 import SchoolJaneLayer from './schools/SchoolLayer';
 
+import Navigation from './navigation/Navigation';
 import 'jane-maps/dist/styles.css'
 import './App.css';
 
@@ -15,12 +16,18 @@ injectTapEventPlugin();
 const App = () => {
 
   return (
-    <MuiThemeProvider>
-
-      <Jane mapboxGLOptions={mapboxGLOptions} search searchConfig={searchConfig}>
-        <SchoolJaneLayer defaultSelected/>
-      </Jane>
-    </MuiThemeProvider>
+    <div>
+      <Navigation/>
+      <MuiThemeProvider>
+        <div>
+          <div className="fullscreen">
+            <Jane mapboxGLOptions={mapboxGLOptions} search searchConfig={searchConfig}>
+              <SchoolJaneLayer defaultSelected/>
+            </Jane>
+          </div>
+        </div>
+      </MuiThemeProvider>
+    </div>
   );
 };
 
