@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import './Topbar.css';
 
 export default class Topbar extends React.Component {
+
   render() {
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
@@ -16,7 +18,8 @@ export default class Topbar extends React.Component {
           <Link to={`${process.env.PUBLIC_URL}/`} className="navbar-brand"></Link>
           <div className="navbar-title">DigiSchool Kenya
             <span className="title">
-              | Project Explorer</span>
+               {" | " + this.props.subhead}
+            </span>
           </div>
         </div>
         <div id="navbar" className="navbar-collapse collapse">
@@ -33,3 +36,6 @@ export default class Topbar extends React.Component {
     );
   }
 }
+Topbar.propTypes = {
+  subhead: PropTypes.string
+};

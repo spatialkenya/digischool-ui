@@ -7,7 +7,7 @@ import {mapboxGLOptions, searchConfig} from './map.config';
 
 import SchoolJaneLayer from '../../layers/schools/SchoolLayer';
 
-import Navigation from '../topbar/Topbar';
+import Topbar from '../topbar/Topbar';
 import 'jane-maps/dist/styles.css'
 import './App.css';
 
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <div>
-      <Navigation/>
+      <Topbar subhead={"Project Explorer"}/>
       <MuiThemeProvider>
         <div>
           <div className="fullscreen">

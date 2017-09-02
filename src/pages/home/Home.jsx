@@ -8,7 +8,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <Topbar/>
+        <Topbar subhead={"Welcome"}/>
         <div className="explorer-landing">
           <section className="header-area">
             <div className="container">
