@@ -5,9 +5,9 @@ import {Jane} from 'jane-maps';
 
 import {mapboxGLOptions, searchConfig} from './map.config';
 
-import SchoolJaneLayer from './schools/SchoolLayer';
+import SchoolJaneLayer from '../../layers/schools/SchoolLayer';
 
-import Navigation from './navigation/Navigation';
+import Navigation from '../topbar/Topbar';
 import 'jane-maps/dist/styles.css'
 import './App.css';
 

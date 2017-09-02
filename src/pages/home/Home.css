@@ -1,0 +1,103 @@
+.explorer-landing {
+  margin-top: 50px;
+}
+
+.explorer-landing .header-area {
+  color: #fff;
+  padding: 100px 0;
+}
+
+.section-bg {
+  background: rgb(119, 119, 119);
+  padding: 40px;
+}
+
+@media screen and (max-width: 920px) {
+  .explorer-landing .header-area {
+    padding: 8px;
+  }
+}
+
+.explorer-landing h1.section-heading {
+  color: #fff;
+  font-size: 46px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.explorer-landing p.subtitle {
+  width: 80%;
+  margin: 0 auto;
+  color: #efefef;
+  margin-bottom: 30px;
+}
+
+.explorer-landing .learn-more {
+  width: 80%;
+  height: 26px;
+  margin: 0 auto 30px;
+  color: #000;
+}
+
+.explorer-landing .learn-more a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #999;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 18px;
+}
+
+.explorer-landing .splash-button-section {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.explorer-landing .splash-button-section .box:first-child {
+  padding-left: 0;
+}
+
+.explorer-landing .splash-button-section .box.all-link {
+  min-width: 300px;
+}
+
+.explorer-landing .splash-button-section .box {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 920px) {
+  .explorer-landing .splash-button-section .box.all-link {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+}
+
+.explorer-landing .splash-button-section .all-link .btn {
+  font-size: 20px;
+}
+
+.explorer-landing .splash-button-section .all-link a {
+  height: 104px;
+  position: relative;
+}
+
+.explorer-landing .splash-button-section .box a {
+  color: #d96b27;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+}
+
+.explorer-landing .splash-button-section .vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
