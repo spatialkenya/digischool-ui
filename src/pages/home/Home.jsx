@@ -27,6 +27,14 @@ export default class Home extends React.Component {
                         <div className="vertical-align">Go to Map</div>
                       </Link>
                     </div>
+                    <div className="box or-text">
+                      <div className="vertical-align">or</div>
+                    </div>
+                    <div className="box all-link">
+                      <Link className="btn btn-default" to={`${process.env.PUBLIC_URL}/analytics`}>
+                        <div className="vertical-align">View analytics</div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

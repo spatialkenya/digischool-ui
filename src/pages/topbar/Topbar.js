@@ -28,6 +28,9 @@ export default class Topbar extends React.Component {
               <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
             </li>
             <li>
+              <Link to={`${process.env.PUBLIC_URL}/analytics`}>Analytics</Link>
+            </li>
+            <li>
               <Link to={`${process.env.PUBLIC_URL}/about`}>About</Link>
             </li>
           </ul>
