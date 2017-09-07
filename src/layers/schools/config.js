@@ -1,47 +1,49 @@
+const appConfig = {
+  carto_user: 'erick-otenyo',
+};
+
 export const schoolLayers = {
   school_done: {
     type: 'circle',
-    filter: ['all', ['==', 'status', 'done', ], ],
+    filter: ["has", "point_count"],
     paint: {
-      'circle-radius': 10,
-      'circle-color': 'green'
+      "circle-color": "#51bbd6",
+      "circle-radius": {
+        property: "point_count",
+        type: "interval",
+        stops: [
+          [0, 7],
+          [20, 15],
+          [50, 20],
+          [100, 30],
+          [750, 40]
+        ]
+      }
     },
   },
-  school_not:{
-    type:'circle',
-    filter:['all',['==','status','not_yet',],],
-    paint:{
-      'circle-radius':10,
-      'circle-color':'red'
-    },
+  cluster_count: {
+    type: "symbol",
+    filter: ["has", "point_count"],
+    layout: {
+      "text-field": "{point_count_abbreviated}",
+      "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+      "text-size": 12
+    }
+  },
+  unclustered: {
+    type: "circle",
+    filter: ["!has", "point_count"],
+    paint: {
+      "circle-color": "#11b4da",
+      "circle-radius": 4,
+      "circle-stroke-width": 1,
+      "circle-stroke-color": "#fff"
+    }
   }
 };
 
 export const sources = {
   schoolsource: {
-    data: {
-      type: 'FeatureCollection',
-      features: [{
-        type: 'Feature',
-        properties: {
-          'name': 'Test School',
-          'status':'done'
-        },
-        geometry: {
-          type: 'Point',
-          coordinates: [36.8219, -1.2921]
-        }
-      },{
-        type: 'Feature',
-        properties: {
-          'name': 'Test School',
-          'status':'not_yet'
-        },
-        geometry: {
-          type: 'Point',
-          coordinates: [36.844687,-1.298711]
-        }
-      },]
-    },
+    data: `https://${appConfig.carto_user}.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20kenya_open_data_initiative_kodi_primary_schools&format=geojson`,
   },
 };

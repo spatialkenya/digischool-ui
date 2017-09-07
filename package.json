@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^1.0.0",
-    "jane-maps": "0.0.21",
+    "jane-maps": "git+https://github.com/spatialkenya/jane-maps.git",
     "jquery": "^3.2.1",
     "jquery-ui-bundle": "^1.12.1",
     "material-ui": "^0.19.0",
@@ -13,6 +13,7 @@
     "rc-tree": "^1.7.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-onclickoutside": "^6.5.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.12",
     "react-tap-event-plugin": "^2.0.1"

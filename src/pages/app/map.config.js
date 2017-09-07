@@ -4,8 +4,8 @@ export const mapboxGLOptions = {
   center: [
     36.8219, -1.2921 //center the map to Nairobi
   ],
-  zoom: 13.62,
-  minZoom: 9,
+  zoom: 7,
+  minZoom: 5,
   maxZoom: null,
   pitch: 0,
   hash: false,
