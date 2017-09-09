@@ -6,6 +6,7 @@ import {Jane} from 'jane-maps';
 import {mapboxGLOptions, searchConfig} from './map.config';
 
 import SchoolJaneLayer from '../../layers/schools/SchoolLayer';
+import AdminLayer from '../../layers/admin/AdminLayer';
 
 import Topbar from '../topbar/Topbar';
 import 'jane-maps/dist/styles.css'
@@ -22,6 +23,7 @@ const App = () => {
         <div>
           <div className="fullscreen">
             <Jane mapboxGLOptions={mapboxGLOptions} search searchConfig={searchConfig}>
+              <AdminLayer defaultDisabled/>
               <SchoolJaneLayer defaultSelected/>
             </Jane>
           </div>

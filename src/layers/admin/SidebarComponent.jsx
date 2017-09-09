@@ -14,7 +14,7 @@ const UIComponent = (props) => {
             }}>
               <h4>Admin Layers</h4>
 
-              <Checkbox label="Counties" checked={props.checkboxes.schools} onCheck={() => props.onCheckboxChange('counties')}/>
+              <Checkbox label="Counties" checked={props.checkboxes.counties} onCheck={() => props.onCheckboxChange('counties')}/>
 
             </div>
           </div>
