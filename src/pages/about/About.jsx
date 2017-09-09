@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Topbar from '../topbar/Topbar';
 
-import '/home/geogirl/Downloads/digischool-ui-master/src/pages/about/About.css';
+import './About.css';
 
 export default class About extends React.Component{
   render(){
