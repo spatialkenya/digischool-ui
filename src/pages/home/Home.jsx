@@ -23,7 +23,7 @@ export default class Home extends React.Component {
                   </p>
                   <div className="splash-button-section">
                     <div className="box all-link">
-                      <Link className="btn btn-default" to={`${process.env.PUBLIC_URL}/explorer`}>
+                      <Link className="btn btn-default" to={`${process.env.PUBLIC_URL}/schools/explorer`}>
                         <div className="vertical-align">Go to Map</div>
                       </Link>
                     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import Topbar from '../topbar/Topbar';
 
 import './About.css';
@@ -9,7 +8,7 @@ export default class About extends React.Component{
     return(
       <div>
         <Topbar subhead={"About"}/>
-        <div classname="heading">
+        <div className="heading">
         <br></br>
         <br></br>
         <h1>About DigiSchool Kenya</h1>

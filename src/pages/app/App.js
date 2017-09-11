@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {Jane} from 'jane-maps';
 
-import {mapboxGLOptions, searchConfig} from './map.config';
+import {mapboxGLOptions, searchConfig} from '../../map.config';
 
 import SchoolJaneLayer from '../../layers/schools/SchoolLayer';
 import AdminLayer from '../../layers/admin/AdminLayer';
@@ -23,8 +23,8 @@ const App = () => {
         <div>
           <div className="fullscreen">
             <Jane mapboxGLOptions={mapboxGLOptions} search searchConfig={searchConfig}>
-              <AdminLayer defaultDisabled/>
-              <SchoolJaneLayer defaultSelected/>
+              <AdminLayer defaultDisabled />
+              <SchoolJaneLayer defaultSelected />
             </Jane>
           </div>
         </div>

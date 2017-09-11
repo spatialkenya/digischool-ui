@@ -1,0 +1,135 @@
+.school-page {
+  margin-top: 20px;
+}
+
+.school-page .back-button {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(255, 255, 255);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  border-radius: 2px;
+  display: inline-block;
+  min-width: 88px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.school-page .button-back {
+  border: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  font-size: inherit;
+  font-weight: inherit;
+  position: relative;
+  z-index: 1;
+  height: 36px;
+  line-height: 36px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.school-page .back-text{
+    position: relative;
+    opacity: 1;
+    font-size: 14px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0px;
+    user-select: none;
+    padding-left: 8px;
+    padding-right: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.school-page h1 h2 {
+  margin: 0;
+  font-family: Oswald, sans-serif;
+  font-size: 36px;
+}
+
+.school-page .breadcrumb {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.school-page .breadcrumb li {
+  margin: 0;
+  list-style: none;
+}
+
+.clearfix {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(255, 255, 255);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  border-radius: 2px;
+  z-index: 1;
+  height: 100%;
+}
+
+.school-page .row {
+  margin-bottom: 30px;
+}
+
+.school-page .equal, .school-page .equal>div[class*=col-] {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.school-page .panel {
+  margin: 0;
+  width: 100%;
+}
+
+.school-page .box-wrapper-1 {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.school-page .box-wrapper-2 {
+  padding-bottom: 8px;
+}
+
+.school-page .box-wrapper-3 {
+  padding: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+  position: relative;
+  white-space: nowrap;
+}
+
+.school-page .box-head-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  padding-right: 90px;
+}
+
+.school-page .box-head {
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 15px;
+}
+
+.school-page .panels-wrapper {
+  padding: 16px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+}

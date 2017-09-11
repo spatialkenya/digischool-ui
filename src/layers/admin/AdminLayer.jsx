@@ -4,9 +4,6 @@ import {JaneLayer, Source, MapLayer} from 'jane-maps';
 import SidebarComponent from './SidebarComponent';
 import {sources, countyLayer} from './config';
 
-
-
-
 class AdminLayer extends React.Component {
 
   constructor() {
@@ -15,10 +12,12 @@ class AdminLayer extends React.Component {
     this.state = {
       checkboxes: {
         counties: true
-      }
+      },
+      selectCounty:null,
     };
 
     this.onCheckboxChange = this.onCheckboxChange.bind(this);
+    this.updateValue = this.updateValue.bind(this);
   }
 
   onCheckboxChange(name) {
@@ -29,6 +28,14 @@ class AdminLayer extends React.Component {
 
     this.setState({checkboxes});
   }
+  updateValue (newCounty) {
+  		console.log('State changed to ' + newCounty);
+  		console.log(this.props.children);
+  		this.setState({
+  			selectCounty: newCounty
+  		});
+  	}
+
   renderCounties() {
     if (!this.state.checkboxes.counties) {
       return null;
@@ -52,7 +59,7 @@ class AdminLayer extends React.Component {
       }
       onCheckboxChange = {
         this.onCheckboxChange
-      } />}>
+      } onSelectChange={this.updateValue} />}>
         {this.renderCounties()}
       </JaneLayer>
     );
@@ -61,7 +68,8 @@ class AdminLayer extends React.Component {
 
 AdminLayer.propTypes = {
   defaultSelected: PropTypes.bool,
-  defaultDisabled: PropTypes.bool
+  defaultDisabled: PropTypes.bool,
+
 };
 
 AdminLayer.defaultProps = {
