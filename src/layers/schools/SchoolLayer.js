@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {JaneLayer, Source, MapLayer} from 'jane-maps';
 import SidebarComponent from './SidebarComponent';
 import {sources, schoolLayers} from './config';
-import {Link} from 'react-router-dom';
 import mapboxgl from 'mapbox-gl';
 class SchoolJaneLayer extends React.Component {
 

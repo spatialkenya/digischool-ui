@@ -4,7 +4,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
-var options = [
+const options = [
   { value: 'kisii', label: 'Kisii' },
   { value: 'nairobi', label: 'Nairobi' }
 ];

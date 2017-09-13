@@ -16,8 +16,8 @@ export default class Topbar extends React.Component {
             <span className="icon-bar"></span>
           </button>
           <Link to={`${process.env.PUBLIC_URL}/`} className="navbar-brand"></Link>
-          <div className="navbar-title">DigiSchool Kenya
-            <span className="title">
+          <div className="navbar-title">DiVA
+            <span className="title subhead">
                {" | " + this.props.subhead}
             </span>
           </div>

@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <Topbar subhead={"Project Explorer"}/>
+      <Topbar subhead={"Schools Explorer"}/>
       <MuiThemeProvider>
         <div>
           <div className="fullscreen">

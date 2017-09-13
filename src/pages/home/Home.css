@@ -116,3 +116,41 @@
     height: 55px;
   }
 }
+
+.explorer-landing .splash-button-section .box.county-link {
+  min-width: 300px;
+}
+
+@media screen and (max-width: 920px) {
+  .explorer-landing .splash-button-section .box.county-link {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+}
+
+.explorer-landing .splash-button-section .county-link .Select {
+  z-index: 99;
+  font-size: 20px;
+    text-align: left;
+}
+
+.explorer-landing .splash-button-section .county-link .Select-control {
+    height: 104px;
+    border-radius: 8px;
+    position: relative;
+    border: 0;
+}
+.explorer-landing .splash-button-section .county-link .Select-multi-value-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.explorer-landing .splash-button-section .county-link .Select-multi-value-wrapper .Select-placeholder {
+    color: #d96b27;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 10px;
+}
