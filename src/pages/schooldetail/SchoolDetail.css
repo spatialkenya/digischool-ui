@@ -1,8 +1,9 @@
-.school-page {
-  margin-top: 20px;
+.detail-page {
+  margin-top: 70px;
+  overflow: visible;
 }
 
-.school-page .back-button {
+.detail-page .back-button {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgb(255, 255, 255);
   transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
@@ -17,7 +18,7 @@
   margin-right: 15px;
 }
 
-.school-page .button-back {
+.detail-page .button-back {
   border: 10px;
   box-sizing: border-box;
   display: inline-block;
@@ -41,7 +42,7 @@
   text-align: center;
 }
 
-.school-page .back-text{
+.detail-page .back-text{
     position: relative;
     opacity: 1;
     font-size: 14px;
@@ -54,19 +55,19 @@
     padding-right: 16px;
     color: rgba(0, 0, 0, 0.87);
 }
-.school-page h1 h2 {
+.detail-page h1 h2 {
   margin: 0;
   font-family: Oswald, sans-serif;
   font-size: 36px;
 }
 
-.school-page .breadcrumb {
+.detail-page .breadcrumb {
   margin: 0;
   padding: 0;
   background-color: #fff;
 }
 
-.school-page .breadcrumb li {
+.detail-page .breadcrumb li {
   margin: 0;
   list-style: none;
 }
@@ -84,30 +85,30 @@
   height: 100%;
 }
 
-.school-page .row {
-  margin-bottom: 30px;
+.detail-page .row {
+  margin-bottom: 5px;
 }
 
-.school-page .equal, .school-page .equal>div[class*=col-] {
+.detail-page .equal, .detail-page .equal>div[class*=col-] {
   display: flex;
   flex: 1 1 auto;
 }
 
-.school-page .panel {
+.detail-page .panel {
   margin: 0;
   width: 100%;
 }
 
-.school-page .box-wrapper-1 {
+.detail-page .box-wrapper-1 {
   margin-bottom: 15px;
   margin-top: 15px;
 }
 
-.school-page .box-wrapper-2 {
+.detail-page .box-wrapper-2 {
   padding-bottom: 8px;
 }
 
-.school-page .box-wrapper-3 {
+.detail-page .box-wrapper-3 {
   padding: 16px;
   font-weight: 500;
   box-sizing: border-box;
@@ -115,20 +116,20 @@
   white-space: nowrap;
 }
 
-.school-page .box-head-wrapper {
+.detail-page .box-head-wrapper {
   display: inline-block;
   vertical-align: top;
   white-space: normal;
   padding-right: 90px;
 }
 
-.school-page .box-head {
+.detail-page .box-head {
   color: rgba(0, 0, 0, 0.87);
   display: block;
   font-size: 15px;
 }
 
-.school-page .panels-wrapper {
+.detail-page .panels-wrapper {
   padding: 16px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.87);

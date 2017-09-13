@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {JaneLayer, Source, MapLayer} from 'jane-maps';
 import SidebarComponent from './SidebarComponent';
 import {sources, schoolLayers} from './config';
+import {Link} from 'react-router-dom';
 import mapboxgl from 'mapbox-gl';
 class SchoolJaneLayer extends React.Component {
 
@@ -28,9 +29,12 @@ class SchoolJaneLayer extends React.Component {
   }
   onLayerClick(features,map) {
     features.forEach(feature => {
+      const detail_url = `${process.env.PUBLIC_URL}/schools/${feature.properties.cartodb_id}`;
+      const detail_link = '<a className="school-link" href="'+detail_url+'">View School Details</a>';
+      const content = '<div class="panel panel-default"><div class="panel-heading"><i class="fa fa-info-circle" aria-hidden="true" style="padding-right: 5px;"></i>'+feature.properties.name_of_sc +'</div><div class="panel-body">'+detail_link+'</div>'
       new mapboxgl.Popup()
   .setLngLat(feature.geometry.coordinates)
-  .setHTML(feature.properties.province)
+  .setHTML(content)
   .addTo(map);
     });
   }
@@ -46,7 +50,7 @@ class SchoolJaneLayer extends React.Component {
         ...schoolLayers.cluster_count
       } />,< MapLayer id = 'unclustered' type = 'symbol' source = 'schools' onClick = {
         this.onLayerClick
-      } {
+      }  {
         ...schoolLayers.unclustered
       } />, < MapLayer id = "schools_done"
       source = "schools" {

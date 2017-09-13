@@ -10,7 +10,9 @@ class Back extends React.Component {
             <div>
               <div>
                 <span className="fa fa-chevron-left"></span>
-                <span className="back-text"> BACK </span>
+                <span className="back-text">
+                  BACK
+                </span>
               </div>
             </div>
           </button>
@@ -31,13 +33,11 @@ export default class Heading extends React.Component {
         <div className="row">
           <Back/>
           <div className="col-md-9 col-md-pull-3">
-            <h3>{this.props.schoolName}</h3>
-            <h4>{this.props.countyName}</h4>
+            <h3>{this.props.countyName}</h3>
             <ol className="breadcrumb">
-              <li>Schools</li>
-              <li>{this.props.countyName}</li>
+              <li>Counties</li>
               <li>
-                <span className="badge">{this.props.schoolName}l</span>
+                <span className="badge">{this.props.countyName}</span>
                 <i className="fa fa-info-circle" aria-hidden="true"></i>
               </li>
             </ol>

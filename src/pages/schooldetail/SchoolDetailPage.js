@@ -8,8 +8,7 @@ export default class SchoolDetailPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      school: '',
-      loading: true
+      school: null,
     };
   }
   componentDidMount() {
@@ -24,7 +23,7 @@ export default class SchoolDetailPage extends React.Component {
     fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT * FROM%20kenya_open_data_initiative_kodi_primary_schools WHERE cartodb_id=${this.props.match.params.schoolId}&format=geojson`).then(response => {
       if (response.ok) {
         response.json().then(school => {
-          this.setState({school: school.features[0], loading: false});
+          this.setState({school: school.features[0]});
         });
       } else {
         response.json().then(error => {
@@ -37,7 +36,7 @@ export default class SchoolDetailPage extends React.Component {
   }
   render() {
     let content;
-    if (this.state.loading) {
+    if (!this.state.school) {
       content = <div>Loading...</div>;
     } else {
       const school = this.state.school;
@@ -47,11 +46,9 @@ export default class SchoolDetailPage extends React.Component {
     }
     return (
       <div><Topbar subhead="School Details"/>
-        <div className="fullscreen">
-          <div className="school-page">
+          <div className="detail-page">
             {content}
           </div>
-        </div>
       </div>
     );
   }

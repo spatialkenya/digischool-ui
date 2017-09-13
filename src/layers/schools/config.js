@@ -12,11 +12,11 @@ export const schoolLayers = {
         property: "point_count",
         type: "interval",
         stops: [
-          [0, 10],
-          [20, 20],
-          [50, 30],
-          [100, 40],
-          [750, 50]
+          [0, 7],
+          [20, 15],
+          [50, 20],
+          [100, 30],
+          [750, 40]
         ]
       }
     },
@@ -35,7 +35,7 @@ export const schoolLayers = {
     filter: ["!has", "point_count"],
     paint: {
       "circle-color": "#11b4da",
-      "circle-radius": 7.5,
+      "circle-radius": 7,
       "circle-stroke-width": 1,
       "circle-stroke-color": "#fff"
     }
