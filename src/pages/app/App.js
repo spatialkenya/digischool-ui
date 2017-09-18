@@ -24,7 +24,7 @@ const App = () => {
           <div className="fullscreen">
             <Jane mapboxGLOptions={mapboxGLOptions} search searchConfig={searchConfig}>
               <AdminLayer defaultDisabled />
-              <SchoolJaneLayer defaultSelected />
+              <SchoolJaneLayer />
             </Jane>
           </div>
         </div>

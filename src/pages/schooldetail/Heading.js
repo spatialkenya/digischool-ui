@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom'
 
-class Back extends React.Component {
-  render() {
+
+const Back = withRouter(({history}) => {
     return (
       <div className="button-container col-md-3 col-md-push-9">
         <div className="back-button">
-          <button type="button" className="button-back" onClick={this.context.router.goBack}>
+          <button type="button" className="button-back" onClick={history.goBack}>
             <div>
               <div>
                 <span className="fa fa-chevron-left"></span>
@@ -17,12 +18,7 @@ class Back extends React.Component {
         </div>
       </div>
     )
-  }
-}
-
-Back.contextTypes = {
-  router: PropTypes.object.isRequired
-};
+})
 
 export default class Heading extends React.Component {
   render() {

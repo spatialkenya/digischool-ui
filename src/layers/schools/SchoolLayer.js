@@ -47,7 +47,7 @@ class SchoolJaneLayer extends React.Component {
         sources.schoolsource.data
       }
       cluster clusterMaxZoom = {
-        9
+        11
       } />, < MapLayer id = 'cluster_count' type = 'symbol' source = 'schools' {
         ...schoolLayers.cluster_count
       } />, < MapLayer id = 'unclustered' type = 'symbol' source = 'schools' onClick = {

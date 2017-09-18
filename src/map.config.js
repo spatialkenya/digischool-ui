@@ -3,9 +3,9 @@ export const mapboxGLOptions = {
   mapbox_accessToken: 'pk.eyJ1IjoiY3dob25nbnljIiwiYSI6ImNpczF1MXdrdjA4MXcycXA4ZGtyN2x5YXIifQ.3HGyME8tBs6BnljzUVIt4Q',
   // mapStyle: 'mapbox://styles/mapbox/streets-v9',
   center: [
-    36.8219, -1.2921 //center the map to Nairobi
+    37.879778,0.241974 //center the map to kenya
   ],
-  zoom: 7,
+  zoom: 6,
   minZoom: 5,
   maxZoom: null,
   pitch: 0,

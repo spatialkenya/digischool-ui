@@ -21,8 +21,7 @@ class Details extends React.Component {
                     <div className="panel-heading">Class One Enrollment</div>
                     <div className="panel-body">
                       <h3>
-                        <i className="fa fa-child" aria-hidden="true"></i>
-                        {this.props.school.properties.class_one}
+                        <i className="fa fa-child" aria-hidden="true"></i> {this.props.school.properties.class_one}
                       </h3>
                     </div>
                   </div>
@@ -32,8 +31,7 @@ class Details extends React.Component {
                     <div className="panel-heading">No of Devices Present</div>
                     <div className="panel-body">
                       <h3>
-                        <i className="fa fa-laptop" aria-hidden="true"></i>
-                        {this.props.school.properties.present_de}</h3>
+                        <i className="fa fa-laptop" aria-hidden="true"></i> {this.props.school.properties.present_de}</h3>
                     </div>
                   </div>
                 </div>
