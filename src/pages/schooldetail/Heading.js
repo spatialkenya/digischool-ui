@@ -31,8 +31,8 @@ export default class Heading extends React.Component {
         <div className="row">
           <Back/>
           <div className="col-md-9 col-md-pull-3">
-            <h3>{this.props.schoolName}</h3>
-            <h4>{this.props.countyName}</h4>
+            <h3>{this.props.schoolName} PRIMARY</h3>
+            <h5>{this.props.countyName} COUNTY</h5>
             <ol className="breadcrumb">
               <li>Schools</li>
               <li>{this.props.countyName}</li>

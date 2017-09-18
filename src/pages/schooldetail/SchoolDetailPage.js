@@ -20,7 +20,7 @@ export default class SchoolDetailPage extends React.Component {
     }
   }
   loadData() {
-    fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT * FROM%20kenya_open_data_initiative_kodi_primary_schools WHERE cartodb_id=${this.props.match.params.schoolId}&format=geojson`).then(response => {
+    fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT * FROM digischool WHERE cartodb_id=${this.props.match.params.schoolId}&format=geojson`).then(response => {
       if (response.ok) {
         response.json().then(school => {
           this.setState({school: school.features[0]});

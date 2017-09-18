@@ -18,7 +18,7 @@ export default class SchoolMap extends React.Component {
       <div className="col-md-6">
         <MuiThemeProvider>
           <div style={{marginTop:'15px'}}>
-            <div className="modalmap" style={{position:'relative',height:'450px',marginBottom: '20px'}}>
+            <div className="modalmap" style={{position:'relative',height:'500px',marginBottom: '20px'}}>
               <Jane mapboxGLOptions={mapboxGLOptions}>
                 <JaneLayer id="school" name={school.properties.name_of_sc} icon="university"  component={<MarkerComponent />}>
                 <Marker label={school.properties.name_of_sc} feature={school} flyTo zoom={10}/>

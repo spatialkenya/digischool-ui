@@ -44,6 +44,6 @@ export const schoolLayers = {
 
 export const sources = {
   schoolsource: {
-    data: `https://${appConfig.carto_user}.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20kenya_open_data_initiative_kodi_primary_schools&format=geojson`,
+    data: `https://${appConfig.carto_user}.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20digischool&format=geojson`,
   },
 };

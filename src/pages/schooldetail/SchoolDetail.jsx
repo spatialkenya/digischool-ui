@@ -18,19 +18,22 @@ class Details extends React.Component {
               <div className="row equal">
                 <div className="col-md-6">
                   <div className="panel panel-default">
-                    <div className="panel-heading">Some Detail Heading</div>
+                    <div className="panel-heading">Class One Enrollment</div>
                     <div className="panel-body">
                       <h3>
-                        Some details here
+                        <i className="fa fa-child" aria-hidden="true"></i>
+                        {this.props.school.properties.class_one}
                       </h3>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="panel panel-default">
-                    <div className="panel-heading">Details again !</div>
+                    <div className="panel-heading">No of Devices Present</div>
                     <div className="panel-body">
-                      <h3>Yet another detail placeholder</h3>
+                      <h3>
+                        <i className="fa fa-laptop" aria-hidden="true"></i>
+                        {this.props.school.properties.present_de}</h3>
                     </div>
                   </div>
                 </div>
@@ -86,20 +89,25 @@ class Issues extends React.Component {
                 </div>
               </div>
               <div className="panels-wrapper">
-                <div className="panel panel-default">
+                <div className="panel with-nav-tabs panel-default">
                   <div className="panel-heading">
-                    <h4>
-                      GOIP Call Centre
-                      <span className="label label-default">
-                        JKUAT
-                      </span>
-                    </h4>
+                    <ul className="nav nav-tabs">
+                      <li className="active">
+                        <a href="#tab1default" className="closed" data-toggle="tab">Closed</a>
+                      </li>
+                      <li>
+                        <a href="#tab2default" className="resolved" data-toggle="tab">Resolved</a>
+                      </li>
+                      <li>
+                        <a href="#tab3default" className="escalated" data-toggle="tab">Escalated</a>
+                      </li>
+                    </ul>
                   </div>
                   <div className="panel-body">
-                    <div>
-                      <div>
-                        <p>Issues here</p>
-                      </div>
+                    <div className="tab-content">
+                      <div className="tab-pane fade in active" id="tab1default">number of closed issues</div>
+                      <div className="tab-pane fade" id="tab2default">Number of resolved issues</div>
+                      <div className="tab-pane fade" id="tab3default">Number of escalated issues</div>
                     </div>
                   </div>
                 </div>
@@ -117,10 +125,10 @@ export default class SchoolDetail extends React.Component {
     const school = this.props.school
     return (
       <div>
-        <Heading countyName={school.properties.province} schoolName={school.properties.name_of_sc}/>
+        <Heading countyName={school.properties.county} schoolName={school.properties.name_of_sc}/>
         <div className="col-md-6">
           <Details school={school}/>
-          <Issues school={school.issues}/>
+          <Issues school={school}/>
         </div>
         <SchoolMap school={school}/>
       </div>
