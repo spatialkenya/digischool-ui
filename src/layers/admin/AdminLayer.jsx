@@ -11,7 +11,8 @@ class AdminLayer extends React.Component {
 
     this.state = {
       checkboxes: {
-        counties: true
+        counties: true,
+        counties_lot2:true,
       },
       selectCounty:null,
     };
@@ -46,6 +47,24 @@ class AdminLayer extends React.Component {
       }
       />, < MapLayer id = 'counties'  source = 'counties' {
         ...countyLayer.counties
+      } />,< MapLayer id = 'counties_lot2'  source = 'counties' {
+        ...countyLayer.counties_lot2
+      } />
+    ].map((child, index) => ({
+      ...child,
+      key: index
+    }));
+  }
+  renderCounties_lot2() {
+    if (!this.state.checkboxes.counties_lot2) {
+      return null;
+    }
+
+    return [ <Source id = "counties_lot2" type = "geojson" data = {
+        sources.countysource.data
+      }
+      />,< MapLayer id = 'counties_lot2'  source = 'counties' {
+        ...countyLayer.counties_lot2
       } />
     ].map((child, index) => ({
       ...child,
@@ -61,6 +80,7 @@ class AdminLayer extends React.Component {
         this.onCheckboxChange
       } onSelectChange={this.updateValue} />}>
         {this.renderCounties()}
+        {this.renderCounties_lot2()}
       </JaneLayer>
     );
   }

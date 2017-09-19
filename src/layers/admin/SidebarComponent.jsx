@@ -1,14 +1,7 @@
 import React from 'react';
 import Checkbox from 'material-ui/Checkbox';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-
-const options = [
-  { value: 'kisii', label: 'Kisii' },
-  { value: 'nairobi', label: 'Nairobi' }
-];
-
 
 const UIComponent = (props) => {
 
@@ -23,8 +16,7 @@ const UIComponent = (props) => {
               <h4>County Layer</h4>
 
               <Checkbox label="Counties" checked={props.checkboxes.counties} onCheck={() => props.onCheckboxChange('counties')}/>
-              <h6>Select County to view details</h6>
-            <Select name="form-field-name" simpleValue options={options} onChange={props.onSelectChange}/>
+              <Checkbox label="Lot 2" checked={props.checkboxes.counties_lot2} onCheck={() => props.onCheckboxChange('counties_lot2')}/>
             </div>
           </div>
         </Tab>

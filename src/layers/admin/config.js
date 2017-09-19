@@ -13,7 +13,21 @@ export const countyLayer = {
       "line-color": "#454647",
       "line-width": 2
     }
-  }
+  },
+  counties_lot2: {
+    type: 'fill',
+    filter: [
+      'all', [
+        '==',
+        'lot',
+        2,
+      ],
+    ],
+    'paint': {
+      'fill-color': '#c3a1c6',
+      'fill-opacity': 0.8
+    }
+  },
 };
 
 export const sources = {
