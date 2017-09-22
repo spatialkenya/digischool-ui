@@ -2,10 +2,12 @@ const appConfig = {
   carto_user: 'erick-otenyo',
 };
 
-export const schoolLayers = {
-  school_done: {
+export const schoolAll = {
+  school_all: {
     type: 'circle',
-    filter: ["has", "point_count"],
+    filter: [
+      "all", ["has", "point_count"]
+    ],
     paint: {
       "circle-color": "#51bbd6",
       "circle-radius": {
@@ -32,18 +34,29 @@ export const schoolLayers = {
   },
   unclustered: {
     type: "circle",
-    filter: ["!has", "point_count"],
+    filter: ["all",["!has", "point_count"],[">","present_de",0]],
     paint: {
       "circle-color": "#11b4da",
-      "circle-radius": 7,
+      "circle-radius": 5,
       "circle-stroke-width": 1,
       "circle-stroke-color": "#fff"
     }
   }
 };
 
+export const schoolNotReceived = {
+  type: 'circle',
+  filter: ["==","present_de",0],
+  paint: {
+    "circle-color": "red",
+    "circle-radius":5,
+    "circle-stroke-width": 1,
+    "circle-stroke-color": "#fff"
+  },
+}
+
 export const sources = {
-  schoolsource: {
+  schoolsource_all: {
     data: `https://${appConfig.carto_user}.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20digischool&format=geojson`,
   },
 };

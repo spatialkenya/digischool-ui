@@ -5,8 +5,6 @@ import {mapboxGLOptions} from '../../map.config';
 import 'jane-maps/dist/styles.css';
 
 
-mapboxGLOptions.mapStyle = 'mapbox://styles/mapbox/streets-v9';
-
 const MarkerComponent = () => (
   <div style={{ padding: '15px' }}>School Layer</div>
 );

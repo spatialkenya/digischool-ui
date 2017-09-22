@@ -25,10 +25,10 @@ export default class Topbar extends React.Component {
         <div id="navbar" className="navbar-collapse collapse">
           <ul className="nav navbar-nav navbar-right ">
             <li>
-              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+              <Link className="nav-item" to={`${process.env.PUBLIC_URL}/`}>Home</Link>
             </li>
             <li>
-              <Link to={`${process.env.PUBLIC_URL}/about`}>About</Link>
+              <Link className="nav-item" to={`${process.env.PUBLIC_URL}/about`}>About</Link>
             </li>
           </ul>
         </div>

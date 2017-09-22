@@ -16,7 +16,7 @@ const UIComponent = (props) => {
               <h4>County Layer</h4>
 
               <Checkbox label="Counties" checked={props.checkboxes.counties} onCheck={() => props.onCheckboxChange('counties')}/>
-              <Checkbox label="Lot 2" checked={props.checkboxes.counties_lot2} onCheck={() => props.onCheckboxChange('counties_lot2')}/>
+              <Checkbox label="Lot 2 Counties" checked={props.checkboxes.counties_lot2} onCheck={() => props.onCheckboxChange('counties_lot2')}/>
             </div>
           </div>
         </Tab>

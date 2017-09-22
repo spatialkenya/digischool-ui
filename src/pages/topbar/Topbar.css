@@ -1,5 +1,5 @@
 .navbar-default .navbar-brand {
-  background-image: url('http://icta.go.ke/digischool/powerassets/uploads/sites/2/2016/10/digischool-logo2.png');
+  background-image: url('https://s3-eu-west-1.amazonaws.com/myspatialdata/digischool-logo2.png');
   background-repeat: no-repeat;
   background-position: 16px 9px;
   background-size: 66px;
@@ -10,7 +10,7 @@
 
 .navbar-title {
   float: left;
-  color: #000;
+  color: #087b1b;
   font-size: 22px;
   line-height: 50px;
   font-weight: 600;
@@ -37,4 +37,7 @@
 
 ul.navbar-right {
   margin-right: 0;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #087b1b;
 }

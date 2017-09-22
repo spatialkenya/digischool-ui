@@ -1,6 +1,6 @@
 import React from 'react';
-import Checkbox from 'material-ui/Checkbox';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import Checkbox from 'material-ui/Checkbox';
 
 const UIComponent = (props) => {
 
@@ -12,10 +12,10 @@ const UIComponent = (props) => {
             <div style={{
               padding: '15px'
             }}>
-              <h4>Schools Layer</h4>
-
-              <Checkbox label="Schools" checked={props.checkboxes.schools} onCheck={() => props.onCheckboxChange('schools')}/>
-
+              <h4>Lot 2 Primary Schools</h4>
+              <Checkbox  label="All Schools" checked={props.checkboxes.schools_all} onCheck={() => props.onCheckboxChange('schools_all')}/>
+              <Checkbox label="Schools Received" checked={props.checkboxes.schools_received} onCheck={() => props.onCheckboxChange('schools_received')}/>
+              <Checkbox style={{backgroungColor:"red"}} label="Schools Not Received" checked={props.checkboxes.schools_not_received} onCheck={() => props.onCheckboxChange('schools_not_received')}/>
             </div>
           </div>
         </Tab>
