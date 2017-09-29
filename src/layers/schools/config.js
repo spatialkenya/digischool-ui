@@ -48,7 +48,7 @@ export const schoolNotReceived = {
   type: 'circle',
   filter: ["==","present_de",0],
   paint: {
-    "circle-color": "red",
+    "circle-color": "#ff6a00",
     "circle-radius":5,
     "circle-stroke-width": 1,
     "circle-stroke-color": "#fff"

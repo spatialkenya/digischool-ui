@@ -12,10 +12,10 @@ const UIComponent = (props) => {
             <div style={{
               padding: '15px'
             }}>
-              <h4>Lot 2 Primary Schools</h4>
+              <h4>Lot 2 Schools Devices Status </h4>
               <Checkbox  label="All Schools" checked={props.checkboxes.schools_all} onCheck={() => props.onCheckboxChange('schools_all')}/>
-              <Checkbox label="Schools Received" checked={props.checkboxes.schools_received} onCheck={() => props.onCheckboxChange('schools_received')}/>
-              <Checkbox style={{backgroungColor:"red"}} label="Schools Not Received" checked={props.checkboxes.schools_not_received} onCheck={() => props.onCheckboxChange('schools_not_received')}/>
+              <Checkbox label="Schools with Learning Devices" checked={props.checkboxes.schools_received} onCheck={() => props.onCheckboxChange('schools_received')}/>
+              <Checkbox iconStyle={{fill: '#ff6a00'}} label="Schools yet to Receive Devices" checked={props.checkboxes.schools_not_received} onCheck={() => props.onCheckboxChange('schools_not_received')}/>
             </div>
           </div>
         </Tab>

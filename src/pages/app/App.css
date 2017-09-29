@@ -1,13 +1,18 @@
 .fullscreen {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    margin-top: 50px;
-    outline: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  margin-top: 50px;
+  outline: hidden;
 }
+
 .mapboxgl-popup-content {
   padding: 15px;
+}
+
+.jane-legend {
+  width: 200px;
 }

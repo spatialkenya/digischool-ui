@@ -60,7 +60,7 @@
 }
 
 .explorer-landing .splash-button-section .box.all-link {
-  min-width: 300px;
+  min-width: 200px;
 }
 
 .explorer-landing .splash-button-section .box {
@@ -83,7 +83,7 @@
 }
 
 .explorer-landing .splash-button-section .all-link a {
-  height: 104px;
+  height: 80px;
   position: relative;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .explorer-landing .splash-button-section .box.county-link {
-  min-width: 300px;
+  min-width: 200px;
 }
 
 @media screen and (max-width: 920px) {
@@ -136,7 +136,7 @@
 }
 
 .explorer-landing .splash-button-section .county-link .Select-control {
-    height: 104px;
+    height: 80px;
     border-radius: 8px;
     position: relative;
     border: 0;
