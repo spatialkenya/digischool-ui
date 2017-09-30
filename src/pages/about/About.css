@@ -14,10 +14,18 @@
   font-weight: 100;
 }
 
-.footer .title{
+.footer .title {
   color: #087b1b;
   font-size: 22px;
   line-height: 50px;
   font-weight: 600;
-  font-family: Philosopher,sans-serif;
+  font-family: Philosopher, sans-serif;
+}
+
+.footer dd a {
+  color: #8f8f8f;
+}
+
+.footer-logo a {
+  color: #8f8f8f;
 }

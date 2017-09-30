@@ -2,7 +2,6 @@ import React from 'react';
 import Topbar from '../topbar/Topbar';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import FlatButton from 'material-ui/FlatButton';
 import './About.css';
 
 const AboutDigischool = () => (
@@ -44,7 +43,7 @@ const AboutDigischool = () => (
       <h4>More Information</h4>
       <p>For more information, please visit the DLP Project website</p>
       <p>
-        <a href="http://icta.go.ke/digischool/" target="_blank">http://icta.go.ke/digischool/</a>
+        <a href="http://icta.go.ke/digischool/" target="_blank" rel="noopener noreferrer">http://icta.go.ke/digischool/</a>
       </p>
     </CardText>
   </Card>
@@ -57,11 +56,20 @@ const AboutDiva = () => (
       paddingBottom: '0px'
     }}/>
     <CardText>
+      <p>DiVA stands for DigiSchool Visualization and Analytics.</p>
       <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT) and POSTIVO-BGH consortium are implementing Lot 2 of the Kenya Digital Literacy Programme (DLP). They are expected to train users, supply, install, commission and support 356, 737 learning devices in 8, 688 public primary schools in 21 counties.</p>
-      <p>The consortium took a multi-institutional approach that brought on board five key players namely: GOIP- a call centre; WEEE Centre- e-waste management; COM21-installation, teacher training; Technology Partner LTD- installation, teacher training; and G4S- Distribution of devices to schools.</p>
-      <p>n order for these institutions to collaborate efficiently and effectively, there was need for a tool. JKUAT and POSTIVO-BGH also require the same tool to enable them dynamically capture current status of the project by use of visualization and analytics of the available data and information.</p>
+      <p>The consortium took a multi-institutional approach that brought on board five key players namely:
+        <ol>
+          <li><strong>GOIP</strong> - a call centre</li>
+          <li><strong>WEEE Centre</strong> - e-waste management</li>
+          <li><strong>COM21</strong> -Installation, Teacher training</li>
+          <li><strong>Technology Partner LTD</strong> - installation, teacher training</li>
+          <li> <strong>G4S</strong> - Distribution of devices to schools</li>
+        </ol>
+      </p>
+      <p>In order for these institutions to <strong>collaborate efficiently and effectively,</strong> there was need for a tool. JKUAT and POSTIVO-BGH also require the same tool to enable them dynamically capture current status of the project by use of visualization and analytics of the available data and information.</p>
       <p>Diva is a web application innovation that aims at addressing the major information needs of all stakeholders of the Digischool project.</p>
-      <p>DigiSchool Visualization and Analytics (DiVA) Web/Mobile application is developed to support the Kenya Digital Literacy Programme.(DLP). The application provides all project stakeholders visual representation of data and information supported with analytics, hence enabling efficient and effective management of the project. The application provides an enabling environment for collaboration among key stakeholders in optimizing resources as well as improving transparency and efficiency of project implementation.</p>
+      <p>DiVA is developed to support the Kenya Digital Literacy Programme.(DLP). The application provides all project stakeholders visual representation of data and information supported with analytics, hence enabling efficient and effective management of the project. The application provides an enabling environment for collaboration among key stakeholders in optimizing resources as well as improving transparency and efficiency of project implementation.</p>
     </CardText>
   </Card>
 );
@@ -74,7 +82,7 @@ const AboutFunctionalities = () => (
     }}/>
     <CardText>
       <ol>
-        <h4>The application supports the following functions namely:</h4>
+        <h4>The application supports the following functions:</h4>
         <li>
           <p>An interactive GIS map interface for visualizing all public schools in Kenya.</p>
           <p>The map currently shows primary schools under the LOT 2 Implemenation</p>
@@ -102,10 +110,10 @@ const Footer = () => (
               <h4 className="">DiVA</h4>
             </dt>
             <dd>
-              <a href="/">Home</a>
+              <a href="/digischool-ui">Home</a>
             </dd>
             <dd>
-              <a href="/about">
+              <a href="/digischool-ui/about">
                 About</a>
             </dd>
             <dd>
@@ -115,8 +123,8 @@ const Footer = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 col-sm-6 col-xs-12">
-          <a href="/" className="lodo-wrapper">
+        <div className="col-md-6 col-sm-6 col-xs-12 footer-logo">
+          <a href="/digischool-ui" className="logo-wrapper">
 
             <img class="logo" src="https://s3-eu-west-1.amazonaws.com/myspatialdata/digischool-logo2.png" alt="DiVA"/>
 
