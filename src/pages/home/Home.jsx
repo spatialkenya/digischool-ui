@@ -21,7 +21,7 @@ const Home = withRouter(({history}) => {
     });
   }
   function onSchoolSelectChange(newSchool) {
-    history.push(`${process.env.PUBLIC_URL}/Schools/${newSchool}`)
+    history.push(`${process.env.PUBLIC_URL}/schools/${newSchool}`)
   };
   function getSchools(input) {
     if (!input) {

@@ -1,1 +1,23 @@
+.about-page {
+  padding: 20px;
+}
 
+.about-page .row {
+  padding: 20px 0;
+}
+
+.footer {
+  background: #ececec;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.footer .title{
+  color: #087b1b;
+  font-size: 22px;
+  line-height: 50px;
+  font-weight: 600;
+  font-family: Philosopher,sans-serif;
+}
