@@ -63,7 +63,7 @@ const Home = withRouter(({history}) => {
                     <div className="vertical-align">or</div>
                   </div>
                   <div className="box county-link">
-                    <Select.Async name="form-field-name" simpleValue placeholder="Search County" valueKey="cartodb_id" labelKey="county" loadOptions={getCounties} onChange={onCountySelectChange}/>
+                    <Select.Async name="form-field-name" simpleValue placeholder="Search County" valueKey="county_id" labelKey="county" loadOptions={getCounties} onChange={onCountySelectChange}/>
                   </div>
                 </div>
               </div>
