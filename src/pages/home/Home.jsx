@@ -16,7 +16,7 @@ const Home = withRouter(({history}) => {
       return Promise.resolve({options: []});
     }
 
-    return fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT cartodb_id,county FROM kenya_counties where county ilike '${input}%25'`).then((response) => response.json()).then((json) => {
+    return fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT county_id,county FROM kenya_counties where county ilike '${input}%25'`).then((response) => response.json()).then((json) => {
       return {options: json.rows};
     });
   }

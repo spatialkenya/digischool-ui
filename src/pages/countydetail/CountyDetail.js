@@ -22,17 +22,17 @@ class Details extends React.Component {
                   <div className="panel panel-default">
                     <div className="panel-heading">Schools Summary</div>
                     <div className="panel-body">
-                      <h3>
-                        Some details here
-                      </h3>
+                      <h5>
+                        Total Number of Schools: {this.props.county.schools}
+                      </h5>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="panel panel-default">
-                    <div className="panel-heading">Details again !</div>
+                    <div className="panel-heading">Total number of Devices </div>
                     <div className="panel-body">
-                      <h3>Yet another detail placeholder</h3>
+                      <h5>No of devices here</h5>
                     </div>
                   </div>
                 </div>
@@ -150,7 +150,8 @@ class GoIP extends React.Component {
                   <div className="panel-body">
                     <div>
                       <div>
-                        <div id="output">{content}</div>
+                        {content}
+                        <div id="output"></div>
                       </div>
                     </div>
                   </div>
@@ -249,11 +250,11 @@ export default class CountyDetail extends React.Component {
     const county = this.props.county
     return (
       <div>
-        <Heading countyName={county.properties.county}/>
+        <Heading countyName={county.properties.name}/>
         <div className="col-md-6">
-          <Details county={county}/>
-          <GoIP county_id={county.properties.county_id}/>
-          <G4S county={county.g4s}/>
+          <Details county={county.properties}/>
+          <GoIP county_id={county.id}/>
+          <G4S county={county}/>
         </div>
         <div className="col-md-6">
           <CountyMap county={county}/>

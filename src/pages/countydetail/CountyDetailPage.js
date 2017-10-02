@@ -20,10 +20,11 @@ export default class CountyDetailPage extends React.Component {
     }
   }
   loadData() {
-    fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT * FROM%20kenya_counties WHERE county_id=${this.props.match.params.countyId}&format=geojson`).then(response => {
+    fetch(`https://digischool.mybluemix.net/api/v1/counties/${this.props.match.params.countyId}`).then(response => {
       if (response.ok) {
         response.json().then(county => {
-          this.setState({county: county.features[0]});
+          console.log(county)
+          this.setState({county: county});
         });
       } else {
         response.json().then(error => {
