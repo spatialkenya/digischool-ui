@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from './Heading';
 import CountyMap from './CountyMap';
+import $ from 'jquery';
+import pivottable from 'pivottable';
 
 class Details extends React.Component {
   render() {
@@ -74,7 +76,55 @@ IssueTable.propTypes = {
 };
 
 class GoIP extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      issues:null
+    }
+  }
+
+  componentDidMount() {
+    this.loadIssues();
+}
+  componentDidUpdate(prevProps) {
+    if (prevProps.county_id !== this.props.county_id) {
+      this.loadIssues();
+    }
+  }
+  loadIssues() {
+    fetch(`https://digischool.mybluemix.net/api/v1/issues/?school__county=${this.props.county_id}`, { headers: { "Authorization":"Token 9f0cd680a086d671d0bf316086a4be3a3dd58968"}}).then(response => {
+      if (response.ok) {
+        response.json().then(issues => {
+          console.log(issues);
+          this.setState({issues: issues});
+        });
+      } else {
+        response.json().then(error => {
+          alert(`Failed to fetch issues: ${error.message}`);
+        });
+      }
+    }).catch(err => {
+      alert(`Error in fetching data from server: ${err.message}`);
+    });
+  }
+
   render() {
+    // const issues_count = issues.length
+    let content;
+    if(!this.state.issues){
+      content = <div>Loading Issues...</div>;
+    }
+    if (this.state.issues) {
+        $("#output").pivotUI(
+          this.state.issues,{
+            derivedAttributes: {
+              "Year/Month": $.pivotUtilities.derivers.dateFormat("date", "%y-%m")
+            },
+            rows: ["error_code"],
+            cols: ["Year/Month"]
+          });
+    }
+
     return (
       <div className="row  box-wrapper-1">
         <div className="col-md-12">
@@ -100,7 +150,7 @@ class GoIP extends React.Component {
                   <div className="panel-body">
                     <div>
                       <div>
-                        <p>Pivot analysis Table here</p>
+                        <div id="output">{content}</div>
                       </div>
                     </div>
                   </div>
@@ -202,7 +252,7 @@ export default class CountyDetail extends React.Component {
         <Heading countyName={county.properties.county}/>
         <div className="col-md-6">
           <Details county={county}/>
-          <GoIP county={county.goip}/>
+          <GoIP county_id={county.properties.county_id}/>
           <G4S county={county.g4s}/>
         </div>
         <div className="col-md-6">
