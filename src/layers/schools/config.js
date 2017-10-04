@@ -34,7 +34,7 @@ export const schoolAll = {
   },
   unclustered: {
     type: "circle",
-    filter: ["all",["!has", "point_count"],[">","present_de",0]],
+    filter: ["all",["!has", "point_count"],[">","present_devices",0]],
     paint: {
       "circle-color": "#11b4da",
       "circle-radius": 5,
@@ -46,7 +46,7 @@ export const schoolAll = {
 
 export const schoolNotReceived = {
   type: 'circle',
-  filter: ["==","present_de",0],
+  filter: ["==","present_devices",0],
   paint: {
     "circle-color": "#ff6a00",
     "circle-radius":5,
