@@ -13,11 +13,17 @@ const CountyMapComponent = () => (
   }}>County Layer</div>
 );
 
+const SchoolComponent = () => (
+  <div style={{
+    padding: '15px'
+  }}>County Layer</div>
+);
+
 export default class CountyMap extends React.Component {
   render() {
     const county = this.props.county
+    const school_data = `https://erick-otenyo.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20digischool where county='${county.properties.name}'&format=geojson`
     return (
-
       <MuiThemeProvider>
         <div style={{
           marginTop: '15px'
@@ -37,6 +43,23 @@ export default class CountyMap extends React.Component {
                   "line-join": "round",
                   "line-cap": "round"
                 }} fitFeatureBounds={bbox(county)}/>
+              </JaneLayer>
+              <JaneLayer id="schools" name='Schools' icon="university" component={< SchoolComponent />}>
+                <Source id="schools" type="geojson" data={school_data}/>
+                <MapLayer id="schoollayer" source="schools" type="circle" paint={{
+                  "circle-color": {
+                      property: 'present_devices',
+                      stops: [
+                        [
+                          0, '#f1f075'
+                        ],
+                        [1, '#e55e5e']
+                      ]
+                  },
+                  "circle-radius": 5,
+                  "circle-stroke-width": 1,
+                  "circle-stroke-color": "#fff"
+                }}/>
               </JaneLayer>
             </Jane>
           </div>
