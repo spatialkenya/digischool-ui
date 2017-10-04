@@ -20,14 +20,14 @@ export default class SchoolDetailPage extends React.Component {
     }
   }
   loadData() {
-    fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT * FROM digischool WHERE cartodb_id=${this.props.match.params.schoolId}&format=geojson`).then(response => {
+    fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT * FROM digischool WHERE id=${this.props.match.params.schoolId}&format=geojson`).then(response => {
       if (response.ok) {
         response.json().then(school => {
           this.setState({school: school.features[0]});
         });
       } else {
         response.json().then(error => {
-          alert(`Failed to fetch issue: ${error.message}`);
+          alert(`Failed to fetch data: ${error.message}`);
         });
       }
     }).catch(err => {

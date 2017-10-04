@@ -143,9 +143,9 @@ class GoIP extends React.Component {
               <div className="panels-wrapper">
                 <div className="panel panel-default">
                   <div className="panel-heading">
-                    <h4>
-                      Call Issues
-                    </h4>
+                    <h5>
+                      GOIP - Call Centre
+                    </h5>
                   </div>
                   <div className="panel-body">
                     <div>
@@ -174,7 +174,7 @@ class G4S extends React.Component {
             <div className="box-wrapper-2">
               <div className="box-wrapper-3">
                 <div className="box-head-wrapper">
-                  <span className="box-head">Diva - G4s Analysis |
+                  <span className="box-head">Diva - G4S Analysis |
                     <span className="label label-default">
                       <i className="fa fa-info-circle" aria-hidden="true"></i>
                       Data from G4S
@@ -185,9 +185,49 @@ class G4S extends React.Component {
               <div className="panels-wrapper">
                 <div className="panel panel-default">
                   <div className="panel-heading">
-                    <h4>
-                      G4s
-                    </h4>
+                    <h5>
+                      G4S - Devices Delivery
+                    </h5>
+                  </div>
+                  <div className="panel-body">
+                    <div>
+                      <div>
+                        <p>Analysis Table here</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+class COM21 extends React.Component {
+  render() {
+    return (
+      <div className="row  box-wrapper-1">
+        <div className="col-md-12">
+          <div className="call-issues-details clearfix">
+            <div className="box-wrapper-2">
+              <div className="box-wrapper-3">
+                <div className="box-head-wrapper">
+                  <span className="box-head">Diva - COM 21 Analysis |
+                    <span className="label label-default">
+                      <i className="fa fa-info-circle" aria-hidden="true"></i>
+                      Data from COM 21
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div className="panels-wrapper">
+                <div className="panel panel-default">
+                  <div className="panel-heading">
+                    <h5>
+                      COM 21 - Installation, Teacher training
+                    </h5>
                   </div>
                   <div className="panel-body">
                     <div>
@@ -225,9 +265,51 @@ class WEEE extends React.Component {
               <div className="panels-wrapper">
                 <div className="panel panel-default">
                   <div className="panel-heading">
-                    <h4>
-                      WEEE data
-                    </h4>
+                    <h5>
+                      WEEE - e-waste Management
+                    </h5>
+                  </div>
+                  <div className="panel-body">
+                    <div>
+                      <div>
+                        <p>Analysis Table here</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class TPL extends React.Component {
+  render() {
+    return (
+      <div className="row  box-wrapper-1">
+        <div className="col-md-12">
+          <div className="call-issues-details clearfix">
+            <div className="box-wrapper-2">
+              <div className="box-wrapper-3">
+                <div className="box-head-wrapper">
+                  <span className="box-head">Diva - TPL Analysis |
+                    <span className="label label-default">
+                      <i className="fa fa-info-circle" aria-hidden="true"></i>
+                      Data from  TPL
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div className="panels-wrapper">
+                <div className="panel panel-default">
+                  <div className="panel-heading">
+                    <h5>
+                      TPL - Installation, Teacher training
+
+                    </h5>
                   </div>
                   <div className="panel-body">
                     <div>
@@ -255,12 +337,13 @@ export default class CountyDetail extends React.Component {
           <Details county={county.properties}/>
           <GoIP county_id={county.id}/>
           <G4S county={county}/>
+          <TPL county={county}/>
         </div>
         <div className="col-md-6">
           <CountyMap county={county}/>
           <WEEE county={county.weee}/>
+          <COM21 county={county}/>
         </div>
-
       </div>
     );
   }

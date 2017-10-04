@@ -28,7 +28,7 @@ const Home = withRouter(({history}) => {
       return Promise.resolve({options: []});
     }
 
-    return fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT cartodb_id,CONCAT(initcap(name_of_sc),' - ' ,initcap(county) ,' ','County') as name_of_sc FROM digischool where name_of_sc ilike '%25${input}%25'`).then((response) => response.json()).then((json) => {
+    return fetch(`https://erick-otenyo.carto.com/api/v2/sql?q=SELECT id,CONCAT(initcap(name),' - ' ,initcap(county) ,' ','County') as name FROM digischool where name ilike '%25${input}%25'`).then((response) => response.json()).then((json) => {
       return {options: json.rows};
     });
   }
@@ -57,7 +57,7 @@ const Home = withRouter(({history}) => {
                     <div className="vertical-align">or</div>
                   </div>
                   <div className="box county-link">
-                    <Select.Async name="form-field-name" simpleValue placeholder="Search School" valueKey="cartodb_id" labelKey="name_of_sc" loadOptions={getSchools} onChange={onSchoolSelectChange}/>
+                    <Select.Async name="form-field-name" simpleValue placeholder="Search School" valueKey="id" labelKey="name" loadOptions={getSchools} onChange={onSchoolSelectChange}/>
                   </div>
                   <div className="box or-text">
                     <div className="vertical-align">or</div>
