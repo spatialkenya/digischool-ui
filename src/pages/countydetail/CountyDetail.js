@@ -118,10 +118,10 @@ class GoIP extends React.Component {
         $("#output").pivotUI(
           this.state.issues,{
             derivedAttributes: {
-              "Year/Month": $.pivotUtilities.derivers.dateFormat("date", "%y-%m")
+              "Year": $.pivotUtilities.derivers.dateFormat("date", "%y")
             },
             rows: ["error_code"],
-            cols: ["Year/Month"]
+            cols: ["Year"]
           });
     }
 
