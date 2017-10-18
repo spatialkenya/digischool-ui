@@ -92,7 +92,7 @@ class GoIP extends React.Component {
     }
   }
   loadIssues() {
-    fetch(`https://digischool.mybluemix.net/api/v1/issues/?school__county=${this.props.county_id}`, { headers: { "Authorization":"Token 9f0cd680a086d671d0bf316086a4be3a3dd58968"}}).then(response => {
+    fetch(`https://digischool.mybluemix.net/api/v1/issues/?school__county=${this.props.county_id}`).then(response => {
       if (response.ok) {
         response.json().then(issues => {
           console.log(issues);
